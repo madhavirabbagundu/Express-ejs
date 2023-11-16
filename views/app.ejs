@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.tableData,tr,th,td{
+    border:1px solid black;
+
+}
+#FormContainer{
+    border:1px solid black;
+    padding:1%;
+    margin-right:20%;
+    margin-left:20%;
+    border-radius:3%;
+    /* width:40%; */
+}
+label{
+    font-family: 'Courier New', Courier, monospace;
+}
+.Inputfields{
+    width:40%;
+    padding:1%;
+    margin:0.5%;
+
+}
+.submitButton{
+    width:20%;
+    padding:1%;
+    background-color: orangered;
+    border-radius:3%;
+    border: none;
+    margin-left:30%;
+    /* position:absolute; */
+}
+
+</style>
+<body>
+
+    <div id = "FormContainer">
+        <form action = "/"method="post">
+        <label> Name :
+             <input type = "text"
+              placeholder="Enter your name"
+              name = named
+              class = "Inputfields"
+              autocomplete="off"/></label></br>
+
+        <label> Number :
+             <input type = "number"
+             placeholder="Enter your phone number"
+             name=number
+             class = "Inputfields"
+
+             autocomplete="off"/></label></br>
+
+        <label>Email      :
+             <input type = "email"
+              placeholder="Enter your email"
+              name = "email"
+              class = "Inputfields"
+
+              autocomplete="off"/></label></br>
+
+        <button class = "submitButton" type = "submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <table class = "tableData">
+            <tr style = "border:1px solid black">
+                <th style = "border:1px solid black">Name</th>
+                <th>Phone Number</th>
+                <th>Email Address</th>
+            </tr>
+            <tbody>
+                <% for(let i = 0; i < Name.length; i++){ %>
+                  <tr>
+                    <td><%= Name[i] %></td></br>
+                    <td><%= Number[i] %></td>
+                    <td><%= Email[i] %></td>
+
+                  </tr>
+                <% } %>
+               
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
