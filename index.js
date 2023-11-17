@@ -24,6 +24,7 @@ app.post('/',(req,res)=>{
     NameData.push(named)
     NumberData.push(number)
     EmailData.push(email)
+    
     res.redirect('/')
 })
 
